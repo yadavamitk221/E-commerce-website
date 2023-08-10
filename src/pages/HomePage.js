@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '../features/navbar/Navbar';
 import ProductList from '../features/Product List/ProductList';
 
-function Home() {
+function HomePage() {
   return (
     <div>
       <Navbar>
@@ -13,4 +13,4 @@ function Home() {
   )
 }
 
-export default Home
+export default HomePage
