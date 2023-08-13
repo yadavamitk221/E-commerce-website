@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../features/navbar/Navbar';
-import ProductList from '../features/Product List/ProductList';
+import ProductList from '../features/Product List/components/ProductList';
 
 function HomePage() {
   return (
@@ -13,4 +13,4 @@ function HomePage() {
   )
 }
 
-export default HomePage
+export default HomePage;
