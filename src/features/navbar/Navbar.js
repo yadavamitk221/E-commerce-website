@@ -38,11 +38,14 @@ function Navbar({children}) {
                 <div className="flex h-16 items-center justify-between">
                   <div className="flex items-center">
                     <div className="flex-shrink-0">
-                      <img
-                        className="h-8 w-8"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                        alt="Your Company"
-                      />
+                    <Link to="/">
+                    <img
+                    className="h-8 w-8"
+                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                    alt="Your Company"
+                  />
+                    </Link>
+                    
                     </div>
                     <div className="hidden md:block">
                       <div className="ml-10 flex items-baseline space-x-4">
@@ -81,7 +84,7 @@ function Navbar({children}) {
                         </button>{" "}
                       </Link>
 
-                      <span class="bg-red-100 text-red-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded-md mb-7 -ml-3 dark:bg-red-900 dark:text-red-300">
+                      <span className="bg-red-100 text-red-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded-md mb-7 -ml-3 dark:bg-red-900 dark:text-red-300">
                         3
                       </span>
 
