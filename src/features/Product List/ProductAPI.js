@@ -8,6 +8,26 @@ export function fetchAllProducts() {
   );
 }
 
+export function fetchCategories() {
+  return new Promise(async (resolve) =>{
+    //TODO: we will not hard-code server URL here
+    const response = await fetch('http://localhost:8080/categories');
+    const data = await response.json()
+    resolve({data});
+  }
+  );
+}
+
+export function fetchBrands() {
+  return new Promise(async (resolve) =>{
+    //TODO: we will not hard-code server URL here
+    const response = await fetch('http://localhost:8080/brands') 
+    const data = await response.json()
+    resolve({data});
+  }
+  );
+}
+
 export function fetchProductsByFilters(filter, sort, pagination) {
   // filter = {"category":"smartphone"}
   // sort = {_sort: "price"_order="desc"}
@@ -19,7 +39,6 @@ export function fetchProductsByFilters(filter, sort, pagination) {
     if(categoryValue.length){
       const lastCategoryValue = categoryValue[categoryValue.length-1];
       queryString += `${key}=${lastCategoryValue}&`
-      console.log(queryString);
     }
   }
 
