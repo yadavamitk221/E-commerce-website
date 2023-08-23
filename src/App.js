@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import CartPage from "./pages/CartPage";
 import Checkout from "./pages/Checkout";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
+import Protected from "./features/auth/components/Protected";
 
 import { createBrowserRouter, RouterProvider, Route, Link} from "react-router-dom";
 import "./index.css";
@@ -13,27 +14,44 @@ import "./index.css";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage/>,
+    element: (
+      <Protected>
+        <HomePage />
+      </Protected>
+    ),
   },
   {
     path: "/Login",
-    element: <LoginPage/>,
+    element: <LoginPage />,
   },
   {
     path: "/Signup",
-    element: <SignupPage/>,
+    element: <SignupPage />,
   },
   {
     path: "/Cart",
-    element: <CartPage/>,
+    element: (
+      <Protected>
+        <CartPage />
+      </Protected>
+    ),
   },
   {
     path: "/product-detail/:id",
-    element: <ProductDetailsPage/>,
+    element: (
+      <Protected>
+        {" "}
+        <ProductDetailsPage />
+      </Protected>
+    ),
   },
   {
     path: "/Checkout",
-    element:<Checkout/>,
+    element: (
+      <Protected>
+        <Checkout />
+      </Protected>
+    ),
   },
 ]);
 
