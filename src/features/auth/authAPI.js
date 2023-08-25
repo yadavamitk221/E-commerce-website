@@ -19,10 +19,12 @@ export function checkUser(loginInfo) {
     const password = loginInfo.password;
     const response = await fetch("http://localhost:8080/users?email=" + email);
     const data = await response.json();
-    console.log(data);
-    if (data.length) {
+    if (data.length>0) {
+      console.log(password,"sssssss",data[0].password)
       if (password === data[0].password) {
-        resolve({ data: data[0] });
+        console.log("sssssss")
+        console.log("user data", data);
+        resolve({ data: data[0]});
       } else {
         reject({ message: "wrong credentials" });
       }

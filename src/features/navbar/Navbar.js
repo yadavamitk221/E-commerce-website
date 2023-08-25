@@ -2,6 +2,8 @@ import { Children, Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, ShoppingCartIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom'
+import { selectItems } from '../cart/cartSlice'
+import { useSelector} from 'react-redux'
 
 
 const user = {
@@ -28,6 +30,7 @@ function classNames(...classes) {
 }
 
 function Navbar({children}) {
+  const items = useSelector(selectItems);
   return (
     <div>
       <div className="min-h-full">
@@ -83,10 +86,9 @@ function Navbar({children}) {
                           />
                         </button>{" "}
                       </Link>
-
-                      <span className="bg-red-100 text-red-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded-md mb-7 -ml-3 dark:bg-red-900 dark:text-red-300">
-                        3
-                      </span>
+                      {items.length>0 && <span className="bg-red-100 text-red-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded-md mb-7 -ml-3 dark:bg-red-900 dark:text-red-300">
+                        {items.length}
+                      </span>}
 
                       {/* Profile dropdown */}
                       <Menu as="div" className="relative ml-3">
@@ -116,7 +118,6 @@ function Navbar({children}) {
                                 {({ active }) => (
                                   <Link
                                   to={item.link}
-                                    href={item.href}
                                     className={classNames(
                                       active ? "bg-gray-100" : "",
                                       "block px-4 py-2 text-sm text-gray-700"
@@ -199,12 +200,14 @@ function Navbar({children}) {
                           className="h-6 w-6"
                           aria-hidden="true"
                         />
-                      </button>
-                    </Link>
+                        </button>
+                        
+                        </Link>
+                        {items.length > 0 && <span className="bg-red-100  text-red-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded-md mb-7 -ml-3 dark:bg-red-900 dark:text-red-300">
+                      {items.length}
+                       </span>}
 
-                    <span class="bg-red-100 text-red-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded-md mb-7 -ml-3 dark:bg-red-900 dark:text-red-300">
-                      3
-                    </span>
+                    
                   </div>
                   <div className="mt-3 space-y-1 px-2">
                     {userNavigation.map((item) => (
@@ -214,7 +217,7 @@ function Navbar({children}) {
                         href={item.href}
                         className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
                       >
-                        {item.name}
+                        {items.length}
                       </Disclosure.Button>
                     ))}
                   </div>

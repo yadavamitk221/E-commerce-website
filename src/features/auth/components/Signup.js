@@ -5,7 +5,6 @@ import { useForm } from "react-hook-form";
 import { selectLoggedInUser, createUserAsync } from "../authSlice";
 import { Navigate } from "react-router-dom";
 
-
 export default function Signup() {
   const user = useSelector(selectLoggedInUser);
   const dispatch = useDispatch();
@@ -17,7 +16,6 @@ export default function Signup() {
   } = useForm();
 
   console.log(errors);
-
 
   return (
 

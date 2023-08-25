@@ -37,21 +37,21 @@ export const authSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(createUserAsync.pending, (state) => {
-        state.loggedInUser = 'loading';
+        state.status = 'loading';
       })
       .addCase(createUserAsync.fulfilled, (state, action) => {
-        state.loggedInUser = 'idle';
+        state.status = 'idle';
         state.loggedInUser = action.payload;
       })
       .addCase(checkUserAsync.pending, (state) => {
-        state.loggedInUser = 'loading';
+        state.status = 'loading';
       })
       .addCase(checkUserAsync.fulfilled, (state, action) => {
-        state.loggedInUser = 'idle';
+        state.status = 'idle';
         state.loggedInUser = action.payload;
       })
       .addCase(checkUserAsync.rejected, (state, action) => {
-        state.loggedInUser = 'idle';
+        state.status = 'idle';
         state.error = action.error;
       })
   },
