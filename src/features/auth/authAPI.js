@@ -20,10 +20,7 @@ export function checkUser(loginInfo) {
     const response = await fetch("http://localhost:8080/users?email=" + email);
     const data = await response.json();
     if (data.length>0) {
-      console.log(password,"sssssss",data[0].password)
       if (password === data[0].password) {
-        console.log("sssssss")
-        console.log("user data", data);
         resolve({ data: data[0]});
       } else {
         reject({ message: "wrong credentials" });
@@ -32,5 +29,20 @@ export function checkUser(loginInfo) {
       reject({ message: "user not found" });
     }
     //  TODO: on server it will return only some information of the user (not password);
+  });
+}
+
+
+export function updateUser(update) {
+  console.log("authApi", update);
+  return new Promise(async (resolve) => {
+    const response = await fetch("http://localhost:8080/users/"+update.id, {
+      method: "PATCH",
+      body: JSON.stringify(update),
+      headers: { "content-type": "application/json" },
+    });
+    const data = await response.json();
+    //  TODO: on server it will return only some information of the user (not password);
+    resolve({ data });
   });
 }

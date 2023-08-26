@@ -22,7 +22,6 @@ export function fetchItemsByUserId(userId) {
 }
 
 export function updateCart(update) {
-  console.log("update", update);
   return new Promise(async (resolve) => {
     const response = await fetch("http://localhost:8080/cart/"+update.id, {
       method: "PATCH",

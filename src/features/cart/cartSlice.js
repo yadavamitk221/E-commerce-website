@@ -63,7 +63,7 @@ export const counterSlice = createSlice({
       })
       .addCase(fetchItemsByUserIdAsync.fulfilled, (state, action) => {
         state.status = 'idle';
-        state.items =action.payload;
+        state.items = action.payload;
       })
       .addCase(updateCartAsync.pending, (state) => {
         state.status = 'loading';
@@ -78,7 +78,7 @@ export const counterSlice = createSlice({
       })
       .addCase(deleteItemFromCartAsync.fulfilled, (state, action) => {
         state.status = 'idle';
-        const index = action.payload
+        const index = state.items.findIndex(item => item.id === action.payload.id);
         state.items.splice(index, 1);
       });
   },
