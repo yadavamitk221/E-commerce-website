@@ -45,3 +45,17 @@ export function deleteItemFormCart(itemId) {
     resolve({ data: {id:itemId} });
   });
 }
+
+
+export function resetCart(userId) {
+  // get all items of user - and then delete e  ach item 
+  return new Promise(async (resolve) => {
+  const response = await fetchItemsByUserId(userId);
+  const items = response.data;
+  console.log("All Items of User",items);
+  for(let item of items){
+    await deleteItemFormCart(item.id);
+  }
+  resolve({status: 'success'});
+})
+}

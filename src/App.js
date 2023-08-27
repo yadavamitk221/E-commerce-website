@@ -7,18 +7,18 @@ import CartPage from "./pages/CartPage";
 import Checkout from "./pages/Checkout";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 import Protected from "./features/auth/components/Protected";
+import PageNotFound from "./pages/404";
+import OrderSuccessPage from "./pages/OrderSuccessPage";
 
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
-  Link,
 } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import "./index.css";
 import { selectLoggedInUser } from "./features/auth/authSlice";
-import { UseSelector } from "react-redux/es/hooks/useSelector";
 import { fetchItemsByUserIdAsync } from "./features/cart/cartSlice";
+import UserOrdersPage from "./pages/UserOrdersPage";
 
 const router = createBrowserRouter([
   {
@@ -60,6 +60,28 @@ const router = createBrowserRouter([
       <Protected>
         <Checkout />
       </Protected>
+    ),
+  },
+  {
+    path: "*",
+    element: <PageNotFound></PageNotFound>,
+  },
+  {
+    path: "/order-success/:id",
+    element: (
+      <Protected>
+        {" "}
+        <OrderSuccessPage></OrderSuccessPage>
+      </Protected>
+    ),
+  },
+  {
+    path: "/orders",
+    element: (
+      <Protected>
+        <UserOrdersPage></UserOrdersPage>
+      </Protected>
+      // we will add pages later right now using components directly.
     ),
   },
 ]);

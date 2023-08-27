@@ -2347,151 +2347,43 @@
           "city": "Thane",
           "state": "Maharashtra",
           "pinCode": "400604"
-        },
-        {
-          "name": "Amitkumar Yadav",
-          "email": "yadavamitk221@gmail.com",
-          "phone": "08451082380",
-          "street": "Savarkar nagar,",
-          "city": "Thane",
-          "state": "Maharashtra",
-          "pinCode": "400604"
-        },
-        {
-          "name": "Amitkumar Yadav",
-          "email": "yadavamitk221@gmail.com",
-          "phone": "08451082380",
-          "street": "Savarkar nagar,",
-          "city": "Thane",
-          "state": "Maharashtra",
-          "pinCode": "400604"
-        },
-        {
-          "name": "Amitkumar Yadav",
-          "email": "yadavamitk221@gmail.com",
-          "phone": "08451082380",
-          "street": "Savarkar nagar,",
-          "city": "Thane",
-          "state": "Maharashtra",
-          "pinCode": "400604"
         }
       ],
       "id": 1
-    },
-    {
-      "email": "sushila@gmail.com",
-      "password": "Sushila@123",
-      "addresses": [],
-      "id": 2
-    },
-    {
-      "email": "prashant@gmail.com",
-      "password": "Ps@1234567890",
-      "addresses": [],
-      "id": 3
     }
   ],
-  "cart": [
-    {
-      "title": "iPhone 9",
-      "description": "An apple mobile which is nothing like apple",
-      "price": 549,
-      "discountPercentage": 12.96,
-      "rating": 4.69,
-      "stock": 94,
-      "brand": "Apple",
-      "category": "smartphones",
-      "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
-      "images": [
-        "https://i.dummyjson.com/data/products/1/1.jpg",
-        "https://i.dummyjson.com/data/products/1/2.jpg",
-        "https://i.dummyjson.com/data/products/1/3.jpg",
-        "https://i.dummyjson.com/data/products/1/4.jpg",
-        "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
-      ],
-      "quantity": 1,
-      "user": 1,
-      "id": 1
-    },
-    {
-      "title": "Infinix INBOOK",
-      "description": "Infinix Inbook X1 Ci3 10th 8GB 256GB 14 Win10 Grey – 1 Year Warranty",
-      "price": 1099,
-      "discountPercentage": 11.83,
-      "rating": 4.54,
-      "stock": 96,
-      "brand": "Infinix",
-      "category": "laptops",
-      "thumbnail": "https://i.dummyjson.com/data/products/9/thumbnail.jpg",
-      "images": [
-        "https://i.dummyjson.com/data/products/9/1.jpg",
-        "https://i.dummyjson.com/data/products/9/2.png",
-        "https://i.dummyjson.com/data/products/9/3.png",
-        "https://i.dummyjson.com/data/products/9/4.jpg",
-        "https://i.dummyjson.com/data/products/9/thumbnail.jpg"
-      ],
-      "quantity": 1,
-      "user": 1,
-      "id": 2
-    }
-  ],
+  "cart": [],
   "orders": [
     {
       "items": [
         {
-          "title": "iPhone X",
-          "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-          "price": 899,
-          "discountPercentage": 17.94,
-          "rating": 4.44,
-          "stock": 34,
+          "title": "iPhone 9",
+          "description": "An apple mobile which is nothing like apple",
+          "price": 549,
+          "discountPercentage": 12.96,
+          "rating": 4.69,
+          "stock": 94,
           "brand": "Apple",
           "category": "smartphones",
-          "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+          "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
           "images": [
-            "https://i.dummyjson.com/data/products/2/1.jpg",
-            "https://i.dummyjson.com/data/products/2/2.jpg",
-            "https://i.dummyjson.com/data/products/2/3.jpg",
-            "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
+            "https://i.dummyjson.com/data/products/1/1.jpg",
+            "https://i.dummyjson.com/data/products/1/2.jpg",
+            "https://i.dummyjson.com/data/products/1/3.jpg",
+            "https://i.dummyjson.com/data/products/1/4.jpg",
+            "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
           ],
           "quantity": 1,
           "user": 1,
-          "id": 6
+          "id": 1
         }
       ],
-      "totalAmount": 899,
+      "totalAmount": 549,
       "totalItems": 1,
       "user": {
         "email": "yadavamitk221@gmail.com",
         "password": "Amit@123",
         "addresses": [
-          {
-            "name": "Amitkumar Yadav",
-            "email": "yadavamitk221@gmail.com",
-            "phone": "08451082380",
-            "street": "Savarkar nagar,",
-            "city": "Thane",
-            "state": "Maharashtra",
-            "pinCode": "400604"
-          },
-          {
-            "name": "Amitkumar Yadav",
-            "email": "yadavamitk221@gmail.com",
-            "phone": "08451082380",
-            "street": "Savarkar nagar,",
-            "city": "Thane",
-            "state": "Maharashtra",
-            "pinCode": "400604"
-          },
-          {
-            "name": "Amitkumar Yadav",
-            "email": "yadavamitk221@gmail.com",
-            "phone": "08451082380",
-            "street": "Savarkar nagar,",
-            "city": "Thane",
-            "state": "Maharashtra",
-            "pinCode": "400604"
-          },
           {
             "name": "Amitkumar Yadav",
             "email": "yadavamitk221@gmail.com",
@@ -2514,6 +2406,7 @@
         "state": "Maharashtra",
         "pinCode": "400604"
       },
+      "status": "pending",
       "id": 1
     },
     {
@@ -2554,135 +2447,6 @@
             "city": "Thane",
             "state": "Maharashtra",
             "pinCode": "400604"
-          },
-          {
-            "name": "Amitkumar Yadav",
-            "email": "yadavamitk221@gmail.com",
-            "phone": "08451082380",
-            "street": "Savarkar nagar,",
-            "city": "Thane",
-            "state": "Maharashtra",
-            "pinCode": "400604"
-          },
-          {
-            "name": "Amitkumar Yadav",
-            "email": "yadavamitk221@gmail.com",
-            "phone": "08451082380",
-            "street": "Savarkar nagar,",
-            "city": "Thane",
-            "state": "Maharashtra",
-            "pinCode": "400604"
-          },
-          {
-            "name": "Amitkumar Yadav",
-            "email": "yadavamitk221@gmail.com",
-            "phone": "08451082380",
-            "street": "Savarkar nagar,",
-            "city": "Thane",
-            "state": "Maharashtra",
-            "pinCode": "400604"
-          }
-        ],
-        "id": 1
-      },
-      "paymentMethod": "card",
-      "selectedAddress": {
-        "name": "Amitkumar Yadav",
-        "email": "yadavamitk221@gmail.com",
-        "phone": "08451082380",
-        "street": "Savarkar nagar,",
-        "city": "Thane",
-        "state": "Maharashtra",
-        "pinCode": "400604"
-      },
-      "id": 2
-    },
-    {
-      "items": [
-        {
-          "title": "iPhone 9",
-          "description": "An apple mobile which is nothing like apple",
-          "price": 549,
-          "discountPercentage": 12.96,
-          "rating": 4.69,
-          "stock": 94,
-          "brand": "Apple",
-          "category": "smartphones",
-          "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
-          "images": [
-            "https://i.dummyjson.com/data/products/1/1.jpg",
-            "https://i.dummyjson.com/data/products/1/2.jpg",
-            "https://i.dummyjson.com/data/products/1/3.jpg",
-            "https://i.dummyjson.com/data/products/1/4.jpg",
-            "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
-          ],
-          "quantity": 1,
-          "user": 1,
-          "id": 1
-        },
-        {
-          "title": "Infinix INBOOK",
-          "description": "Infinix Inbook X1 Ci3 10th 8GB 256GB 14 Win10 Grey – 1 Year Warranty",
-          "price": 1099,
-          "discountPercentage": 11.83,
-          "rating": 4.54,
-          "stock": 96,
-          "brand": "Infinix",
-          "category": "laptops",
-          "thumbnail": "https://i.dummyjson.com/data/products/9/thumbnail.jpg",
-          "images": [
-            "https://i.dummyjson.com/data/products/9/1.jpg",
-            "https://i.dummyjson.com/data/products/9/2.png",
-            "https://i.dummyjson.com/data/products/9/3.png",
-            "https://i.dummyjson.com/data/products/9/4.jpg",
-            "https://i.dummyjson.com/data/products/9/thumbnail.jpg"
-          ],
-          "quantity": 1,
-          "user": 1,
-          "id": 2
-        }
-      ],
-      "totalAmount": 1648,
-      "totalItems": 2,
-      "user": {
-        "email": "yadavamitk221@gmail.com",
-        "password": "Amit@123",
-        "addresses": [
-          {
-            "name": "Amitkumar Yadav",
-            "email": "yadavamitk221@gmail.com",
-            "phone": "08451082380",
-            "street": "Savarkar nagar,",
-            "city": "Thane",
-            "state": "Maharashtra",
-            "pinCode": "400604"
-          },
-          {
-            "name": "Amitkumar Yadav",
-            "email": "yadavamitk221@gmail.com",
-            "phone": "08451082380",
-            "street": "Savarkar nagar,",
-            "city": "Thane",
-            "state": "Maharashtra",
-            "pinCode": "400604"
-          },
-          {
-            "name": "Amitkumar Yadav",
-            "email": "yadavamitk221@gmail.com",
-            "phone": "08451082380",
-            "street": "Savarkar nagar,",
-            "city": "Thane",
-            "state": "Maharashtra",
-            "pinCode": "400604"
-          },
-          {
-            "name": "Amitkumar Yadav",
-            "email": "yadavamitk221@gmail.com",
-            "phone": "08451082380",
-            "street": "Savarkar nagar,",
-            "city": "Thane",
-            "state": "Maharashtra",
-            "pinCode": "400604"
           }
         ],
         "id": 1
@@ -2697,7 +2461,8 @@
         "state": "Maharashtra",
         "pinCode": "400604"
       },
-      "id": 3
+      "status": "pending",
+      "id": 2
     }
   ]
 }
