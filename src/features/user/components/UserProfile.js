@@ -9,6 +9,9 @@ export default function UserProfile() {
   const dispatch = useDispatch();
   const userArray = useSelector(selectUserInfo);
   const user = userArray[0];
+
+// we will add payment section when wework on backend
+
   const {
     register,
     handleSubmit,

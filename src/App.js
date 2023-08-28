@@ -20,8 +20,9 @@ import { useDispatch, useSelector } from "react-redux";
 import "./index.css";
 import { selectLoggedInUser } from "./features/auth/authSlice";
 import { fetchItemsByUserIdAsync } from "./features/cart/cartSlice";
-import { fetchLoggedInUser } from "./features/user/userAPI";
 import { fetchLoggedInUserAsync } from "./features/user/userSlice";
+import Logout from "./features/auth/components/Logout";
+import ForgetPasswordPage from "./pages/ForgetPasswordPage";
 
 
 const router = createBrowserRouter([
@@ -88,11 +89,28 @@ const router = createBrowserRouter([
       // we will add pages later right now using components directly.
     ),
   },
+  ,
+  {
+    path: "/forgot-password",
+    element: (
+        <ForgetPasswordPage></ForgetPasswordPage>
+      // we will add pages later right now using components directly.
+    ),
+  },
   {
     path: "/user-profile",
     element: (
       <Protected>
         <UserProfilePage></UserProfilePage>
+      </Protected>
+      // we will add pages later right now using components directly.
+    ),
+  },
+  {
+    path: "/logout",
+    element: (
+      <Protected>
+        <Logout></Logout>
       </Protected>
       // we will add pages later right now using components directly.
     ),
