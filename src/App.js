@@ -9,6 +9,8 @@ import ProductDetailsPage from "./pages/ProductDetailsPage";
 import Protected from "./features/auth/components/Protected";
 import PageNotFound from "./pages/404";
 import OrderSuccessPage from "./pages/OrderSuccessPage";
+import UserOrdersPage from "./pages/UserOrdersPage";
+import UserProfilePage from "./pages/UserProfilePage";
 
 import {
   createBrowserRouter,
@@ -18,7 +20,9 @@ import { useDispatch, useSelector } from "react-redux";
 import "./index.css";
 import { selectLoggedInUser } from "./features/auth/authSlice";
 import { fetchItemsByUserIdAsync } from "./features/cart/cartSlice";
-import UserOrdersPage from "./pages/UserOrdersPage";
+import { fetchLoggedInUser } from "./features/user/userAPI";
+import { fetchLoggedInUserAsync } from "./features/user/userSlice";
+
 
 const router = createBrowserRouter([
   {
@@ -84,6 +88,15 @@ const router = createBrowserRouter([
       // we will add pages later right now using components directly.
     ),
   },
+  {
+    path: "/user-profile",
+    element: (
+      <Protected>
+        <UserProfilePage></UserProfilePage>
+      </Protected>
+      // we will add pages later right now using components directly.
+    ),
+  },
 ]);
 
 function App() {
@@ -93,6 +106,7 @@ function App() {
   useEffect(() => {
     if (user) {
       dispatch(fetchItemsByUserIdAsync(user.id));
+      dispatch(fetchLoggedInUserAsync(user.id));
     }
   }, [dispatch, user]);
   return (

@@ -7,7 +7,6 @@ const initialState = {
   currentOrder: null
 };
 
-
 export const createOrderAsync = createAsyncThunk(
   'order/createOrder',
   async (order) => {

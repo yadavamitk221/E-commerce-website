@@ -13,6 +13,7 @@ import { useForm } from "react-hook-form";
 import { checkUserAsync, updateUserAsync } from "../features/auth/authSlice";
 import { selectLoggedInUser } from "../features/auth/authSlice";
 import { createOrderAsync, selectCurrentOrder } from "../features/order/orderSlice";
+import { selectUserInfo } from "../features/user/userSlice";
 
 const products = [
   {
@@ -52,7 +53,8 @@ function Checkout() {
     reset
   } = useForm();
 
-  const user = useSelector(selectLoggedInUser);
+  const userArray = useSelector(selectUserInfo);
+  const user = userArray[0];
   const currentOrder = useSelector(selectCurrentOrder);
   const items = useSelector(selectItems);
   const [open, setOpen] = useState(true);
