@@ -4,24 +4,20 @@ import { Bars3Icon, ShoppingCartIcon, XMarkIcon } from '@heroicons/react/24/outl
 import { Link } from 'react-router-dom'
 import { selectItems } from '../cart/cartSlice'
 import { useSelector} from 'react-redux'
+import { selectLoggedInUser } from '../auth/authSlice'
 
-const user = {
-  name: 'Tom Cook',
-  email: 'tom@example.com',
-  imageUrl:
-    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-}
+
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
-  { name: 'Reports', href: '#', current: false },
+  { name: 'Dashboard', link: '#', user: false },
+  { name: 'Team', link: '#', user: false },
+  { name: 'Admin', link: '/admin', admin: true},
+  
 ]
 const userNavigation = [
   { name: 'My Profile', link: '/user-profile' },
   { name: 'My Orders', link: '/orders' },
   { name: 'Sign out', link: '/logout' },
+
 ]
 
 function classNames(...classes) {
@@ -30,6 +26,7 @@ function classNames(...classes) {
 
 function Navbar({children}) {
   const items = useSelector(selectItems);
+  const user = useSelector(selectLoggedInUser);
   return (
     <div>
       <div className="min-h-full">
@@ -52,9 +49,9 @@ function Navbar({children}) {
                     <div className="hidden md:block">
                       <div className="ml-10 flex items-baseline space-x-4">
                         {navigation.map((item) => (
-                          <a
+                          item[user.role] ? <Link
                             key={item.name}
-                            href={item.href}
+                            to={item.link}
                             className={classNames(
                               item.current
                                 ? "bg-gray-900 text-white"
@@ -64,7 +61,7 @@ function Navbar({children}) {
                             aria-current={item.current ? "page" : undefined}
                           >
                             {item.name}
-                          </a>
+                          </Link>: null
                         ))}
                       </div>
                     </div>
@@ -72,7 +69,7 @@ function Navbar({children}) {
                   <div className="hidden md:block">
                     <div className="ml-4 flex items-center md:ml-6">
                       <Link to="/Cart">
-                        {" "}
+                  
                         <button
                           type="button"
                           className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"

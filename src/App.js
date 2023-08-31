@@ -23,7 +23,10 @@ import { fetchItemsByUserIdAsync } from "./features/cart/cartSlice";
 import { fetchLoggedInUserAsync } from "./features/user/userSlice";
 import Logout from "./features/auth/components/Logout";
 import ForgetPasswordPage from "./pages/ForgetPasswordPage";
-
+import AdminHomePage from "./pages/AdminHomePage";
+import AdminProductDetailsPage from "./pages/AdminProductDetailsPage";
+import ProtectedAdmin from "./features/auth/components/ProtectedAdmin";
+import AdminProductFormPage from "./pages/AdminProductFormPage";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +35,14 @@ const router = createBrowserRouter([
       <Protected>
         <HomePage />
       </Protected>
+    ),
+  },
+  {
+    path: "/admin",
+    element: (
+      <ProtectedAdmin>
+        <AdminHomePage></AdminHomePage>
+      </ProtectedAdmin>
     ),
   },
   {
@@ -57,6 +68,31 @@ const router = createBrowserRouter([
         {" "}
         <ProductDetailsPage />
       </Protected>
+    ),
+  },
+  {
+    path: "/admin/product-detail/:id",
+    element: (
+      <ProtectedAdmin>
+        {" "}
+        <AdminProductDetailsPage />
+      </ProtectedAdmin>
+    ),
+  },
+  {
+    path: "/admin/product-form",
+    element: (
+      <ProtectedAdmin>
+        <AdminProductFormPage />
+      </ProtectedAdmin>
+    ),
+  },
+  {
+    path: "/admin/product-form/edit/:id",
+    element: (
+      <ProtectedAdmin>
+        <AdminProductFormPage />
+      </ProtectedAdmin>
     ),
   },
   {
@@ -93,7 +129,7 @@ const router = createBrowserRouter([
   {
     path: "/forgot-password",
     element: (
-        <ForgetPasswordPage></ForgetPasswordPage>
+      <ForgetPasswordPage></ForgetPasswordPage>
       // we will add pages later right now using components directly.
     ),
   },
@@ -130,6 +166,7 @@ function App() {
   return (
     <div className="App">
       <RouterProvider router={router} />
+      {/*Link must be inside route provider */}
     </div>
   );
 }
