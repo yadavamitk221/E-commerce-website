@@ -12,6 +12,7 @@ import {
 } from "../../Product List/ProductSlice";
 import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
+import { discountedPrice } from "../../../app/constant";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
@@ -517,10 +518,7 @@ function ProductGrid({ products }) {
                       <div>
                         <p className="text-sm block font-medium text-gray-900">
                           $
-                          {Math.round(
-                            product.price *
-                              (1 - product.discountPercentage / 100)
-                          )}
+                          {discountedPrice(product)}
                         </p>
                         <p className="text-sm block line-through font-medium text-gray-400">
                           ${product.price}
