@@ -165,6 +165,7 @@ const router = createBrowserRouter([
 function App() {
   const dispatch = useDispatch();
   const user = useSelector(selectLoggedInUser);
+  console.log("user",user);
 
   useEffect(() => {
     if (user) {

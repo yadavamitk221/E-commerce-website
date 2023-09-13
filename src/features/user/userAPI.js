@@ -1,9 +1,8 @@
 // A mock function to mimic making an async request for data
 export function fetchLoggedInUserOrders(userId) {
   return  new  Promise(async (resolve) =>  {
-     const response = await fetch('http://localhost:8080/orders/?user.id='+userId);
+     const response = await fetch('http://localhost:8080/orders/?user='+userId);
      const data = await response.json();
-     console.log(data);
      resolve({data});
   }
   );
@@ -11,14 +10,13 @@ export function fetchLoggedInUserOrders(userId) {
 
 export function fetchLoggedInUser(userId) {
   return  new  Promise(async (resolve) =>  {
-     const response = await fetch('http://localhost:8080/users/?user.id='+userId);
+     const response = await fetch('http://localhost:8080/users/'+userId);
      const data = await response.json();
+     console.log(data);
      resolve({data});
   }
   );
 }
-
-
 
 export function updateUser(update) {
   console.log("authApi", update);

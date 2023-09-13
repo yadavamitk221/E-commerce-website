@@ -6,8 +6,7 @@ import { discountedPrice } from "../../../app/constant";
 
 export default function UserOrder() {
   const dispatch = useDispatch();
-  const userArray = useSelector(selectUserInfo);
-  const user = userArray[0];
+  const user = useSelector(selectUserInfo);
   const orders = useSelector(selectUserOrder);
 
   useEffect(() => {

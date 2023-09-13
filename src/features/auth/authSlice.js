@@ -8,7 +8,6 @@ const initialState = {
   error: null
 };
 
-
 export const createUserAsync = createAsyncThunk(
   'user/createUser',
   async (userData) => {
@@ -17,12 +16,17 @@ export const createUserAsync = createAsyncThunk(
   }
 );
 
-
 export const checkUserAsync = createAsyncThunk(
   'user/checkUser',
-  async (loginInfo) => {
-    const response = await checkUser(loginInfo);
-    return response.data;
+  
+  async (loginInfo, {rejectWithValue}) => {
+    try {
+      const response = await checkUser(loginInfo);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+     return rejectWithValue(error);
+    }
   }
 );
 
@@ -34,7 +38,6 @@ export const signOutUserAsync = createAsyncThunk(
   }
 );
 
-
 export const updateUserAsync = createAsyncThunk(
   'user/updateUser',
   async (update) => {
@@ -43,7 +46,6 @@ export const updateUserAsync = createAsyncThunk(
     return response.data;
   }
 );
-
 
 export const authSlice = createSlice({
   name: 'user',
@@ -71,7 +73,7 @@ export const authSlice = createSlice({
       })
       .addCase(checkUserAsync.rejected, (state, action) => {
         state.status = 'idle';
-        state.error = action.error;
+        state.error = action.payload;
       })
       .addCase(updateUserAsync.pending, (state) => {
         state.status = 'loading';
@@ -93,6 +95,5 @@ export const authSlice = createSlice({
 export const { increment } = authSlice.actions;
 export const selectLoggedInUser = (state) => state.auth.loggedInUser;
 export const selectError = (state) => state.auth.error;
-
 
 export default authSlice.reducer;

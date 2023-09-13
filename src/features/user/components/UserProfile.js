@@ -7,9 +7,8 @@ import { Form } from "react-router-dom";
 
 export default function UserProfile() {
   const dispatch = useDispatch();
-  const userArray = useSelector(selectUserInfo);
-  const user = userArray[0];
-
+  const user = useSelector(selectUserInfo);
+console.log(user);
 // we will add payment section when wework on backend
 
   const {
@@ -51,6 +50,7 @@ export default function UserProfile() {
   };
 
   const handleAdd = (address) => { 
+    console.log(...user.addresses);
     const newUser = { ...user, addresses: [...user.addresses, address] }; //for shallow coppy issue
     dispatch(updateUserAsync(newUser));
     setSelectedEditIndex(-1);
@@ -62,6 +62,7 @@ export default function UserProfile() {
       <div className="mx-auto mt-12 bg-white max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
           <h1 className="text-4xl my-2 font-bold tracking-tight text-gray-900">
+          {console.log(user)}
             Name: {user.name ? user.name : "New User"}
           </h1>
           <h3 className="text-xl my-2  tracking-tight text-red-900">
@@ -87,7 +88,6 @@ export default function UserProfile() {
           className="bg-white px-5 py-16 my-12"
           noValidate
           onSubmit={handleSubmit((data, index) => {
-            console.log(data);
             handleAdd(data);
             reset();
           })}
@@ -254,7 +254,7 @@ export default function UserProfile() {
               </p>
 
               <ul role="list" className="divide-y divide-gray-100">
-                {user.addresses.map((address, index) => (
+                {user.addresses?.map((address, index) => (
                   <li
                     key={index}
                     className="flex justify-between px-5 gap-x-6 py-5 border-solid border-2 border-gray-200"

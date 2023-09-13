@@ -7,7 +7,7 @@
       "price": 11,
       "discountPercentage": 12.96,
       "rating": 0,
-      "stock": 12,
+      "stock": 0,
       "brand": "Apple",
       "category": "smartphones",
       "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
@@ -2358,17 +2358,24 @@
       "password": "Amit@123",
       "role": "admin",
       "addresses": [
+      ],
+      "id": 1
+    },
+    {
+      "email": "prashant@gmail.com",
+      "password": "Prashant@123",
+      "addresses": [
         {
-          "name": "Amit Rituraj Yadav",
-          "state": "Maharashtra",
+          "name": "Prashant Singh",
+          "email": "prashant@gmail.com",
+          "phone": "7977007426",
+          "street": "Indra Nagar",
           "city": "Thane",
-          "pinCode": "400604",
-          "email": "yadavamitk221@gmail.com",
-          "phone": "08451082380",
-          "street": "Savarkar nagar,"
+          "state": "Maharashtra",
+          "pinCode": "400606"
         },
         {
-          "name": "Rahul",
+          "name": "Amitkumar Yadav",
           "email": "yadavamitk221@gmail.com",
           "phone": "08451082380",
           "street": "Savarkar nagar,",
@@ -2377,480 +2384,12 @@
           "pinCode": "400604"
         }
       ],
-      "id": 1
-    },
-    {
-      "email": "prashant@gmail.com",
-      "password": "Prashant@123",
-      "addresses": [],
       "role": "user",
       "id": 2
-    },
-    {
-      "email": "prashant@gmail.com",
-      "password": "Prashant@123",
-      "addresses": [],
-      "role": "user",
-      "id": 3
     }
   ],
   "cart": [],
   "orders": [
-    {
-      "items": [
-        {
-          "title": "iPhone 9",
-          "description": "An apple mobile which is nothing like apple",
-          "price": 549,
-          "discountPercentage": 12.96,
-          "rating": 4.69,
-          "stock": 94,
-          "brand": "Apple",
-          "category": "smartphones",
-          "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
-          "images": [
-            "https://i.dummyjson.com/data/products/1/1.jpg",
-            "https://i.dummyjson.com/data/products/1/2.jpg",
-            "https://i.dummyjson.com/data/products/1/3.jpg",
-            "https://i.dummyjson.com/data/products/1/4.jpg",
-            "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
-          ],
-          "quantity": 1,
-          "user": 1,
-          "id": 1
-        }
-      ],
-      "totalAmount": 549,
-      "totalItems": 1,
-      "user": {
-        "email": "yadavamitk221@gmail.com",
-        "password": "Amit@123",
-        "addresses": [
-          {
-            "name": "Amitkumar Yadav",
-            "email": "yadavamitk221@gmail.com",
-            "phone": "08451082380",
-            "street": "Savarkar nagar,",
-            "city": "Thane",
-            "state": "Maharashtra",
-            "pinCode": "400604"
-          }
-        ],
-        "id": 1
-      },
-      "paymentMethod": "cash",
-      "selectedAddress": {
-        "name": "Amitkumar Yadav",
-        "email": "yadavamitk221@gmail.com",
-        "phone": "08451082380",
-        "street": "Savarkar nagar,",
-        "city": "Thane",
-        "state": "Maharashtra",
-        "pinCode": "400604"
-      },
-      "status": "dispatch",
-      "id": 1,
-      "statue": "dispatch"
-    },
-    {
-      "items": [
-        {
-          "title": "iPhone 9",
-          "description": "An apple mobile which is nothing like apple",
-          "price": 549,
-          "discountPercentage": 12.96,
-          "rating": 4.69,
-          "stock": 94,
-          "brand": "Apple",
-          "category": "smartphones",
-          "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
-          "images": [
-            "https://i.dummyjson.com/data/products/1/1.jpg",
-            "https://i.dummyjson.com/data/products/1/2.jpg",
-            "https://i.dummyjson.com/data/products/1/3.jpg",
-            "https://i.dummyjson.com/data/products/1/4.jpg",
-            "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
-          ],
-          "quantity": 1,
-          "user": 1,
-          "id": 1
-        }
-      ],
-      "totalAmount": 549,
-      "totalItems": 1,
-      "user": {
-        "email": "yadavamitk221@gmail.com",
-        "password": "Amit@123",
-        "addresses": [
-          {
-            "name": "Amitkumar Yadav",
-            "email": "yadavamitk221@gmail.com",
-            "phone": "08451082380",
-            "street": "Savarkar nagar,",
-            "city": "Thane",
-            "state": "Maharashtra",
-            "pinCode": "400604"
-          }
-        ],
-        "id": 1
-      },
-      "paymentMethod": "cash",
-      "selectedAddress": {
-        "name": "Amitkumar Yadav",
-        "email": "yadavamitk221@gmail.com",
-        "phone": "08451082380",
-        "street": "Savarkar nagar,",
-        "city": "Thane",
-        "state": "Maharashtra",
-        "pinCode": "400604"
-      },
-      "status": "delevered",
-      "id": 2,
-      "statue": "delevered"
-    },
-    {
-      "items": [
-        {
-          "title": "iPhone 9",
-          "description": "An apple mobile which is nothing like apple",
-          "price": 549,
-          "discountPercentage": 12.96,
-          "rating": 4.69,
-          "stock": 94,
-          "brand": "Apple",
-          "category": "smartphones",
-          "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
-          "images": [
-            "https://i.dummyjson.com/data/products/1/1.jpg",
-            "https://i.dummyjson.com/data/products/1/2.jpg",
-            "https://i.dummyjson.com/data/products/1/3.jpg",
-            "https://i.dummyjson.com/data/products/1/4.jpg",
-            "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
-          ],
-          "quantity": 1,
-          "user": 1,
-          "id": 1
-        },
-        {
-          "title": "iPhone 9",
-          "description": "An apple mobile which is nothing like apple",
-          "price": 549,
-          "discountPercentage": 12.96,
-          "rating": 4.69,
-          "stock": 94,
-          "brand": "Apple",
-          "category": "smartphones",
-          "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
-          "images": [
-            "https://i.dummyjson.com/data/products/1/1.jpg",
-            "https://i.dummyjson.com/data/products/1/2.jpg",
-            "https://i.dummyjson.com/data/products/1/3.jpg",
-            "https://i.dummyjson.com/data/products/1/4.jpg",
-            "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
-          ],
-          "quantity": 1,
-          "user": 1,
-          "id": 2
-        }
-      ],
-      "totalAmount": 1098,
-      "totalItems": 2,
-      "user": {
-        "email": "yadavamitk221@gmail.com",
-        "password": "Amit@123",
-        "addresses": [
-          {
-            "name": "Amitkumar Yadav",
-            "email": "yadavamitk221@gmail.com",
-            "phone": "08451082380",
-            "street": "Savarkar nagar,",
-            "city": "Thane",
-            "state": "Maharashtra",
-            "pinCode": "400604"
-          },
-          {
-            "name": "Amitkumar Yadav",
-            "email": "yadavamitk221@gmail.com",
-            "phone": "08451082380",
-            "street": "Savarkar nagar,",
-            "city": "Thane",
-            "state": "Maharashtra",
-            "pinCode": "400604"
-          }
-        ],
-        "id": 1
-      },
-      "paymentMethod": "cash",
-      "selectedAddress": {
-        "name": "Amitkumar Yadav",
-        "email": "yadavamitk221@gmail.com",
-        "phone": "08451082380",
-        "street": "Savarkar nagar,",
-        "city": "Thane",
-        "state": "Maharashtra",
-        "pinCode": "400604"
-      },
-      "status": "pending",
-      "id": 3,
-      "statue": "dispatch"
-    },
-    {
-      "items": [
-        {
-          "title": "iPhone 9",
-          "description": "An apple mobile which is nothing like apple",
-          "price": 549,
-          "discountPercentage": 12.96,
-          "rating": 4.69,
-          "stock": 94,
-          "brand": "Apple",
-          "category": "smartphones",
-          "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
-          "images": [
-            "https://i.dummyjson.com/data/products/1/1.jpg",
-            "https://i.dummyjson.com/data/products/1/2.jpg",
-            "https://i.dummyjson.com/data/products/1/3.jpg",
-            "https://i.dummyjson.com/data/products/1/4.jpg",
-            "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
-          ],
-          "quantity": 1,
-          "user": 1,
-          "id": 1
-        }
-      ],
-      "totalAmount": 549,
-      "totalItems": 1,
-      "user": {
-        "email": "yadavamitk221@gmail.com",
-        "password": "Amit@123",
-        "addresses": [
-          {
-            "name": "Amitkumar Yadav",
-            "email": "yadavamitk221@gmail.com",
-            "phone": "08451082380",
-            "street": "Savarkar nagar,",
-            "city": "Thane",
-            "state": "Maharashtra",
-            "pinCode": "400604"
-          },
-          {
-            "name": "Amitkumar Yadav",
-            "email": "yadavamitk221@gmail.com",
-            "phone": "08451082380",
-            "street": "Savarkar nagar,",
-            "city": "Thane",
-            "state": "Maharashtra",
-            "pinCode": "400604"
-          }
-        ],
-        "id": 1
-      },
-      "paymentMethod": "cash",
-      "selectedAddress": {
-        "name": "Amitkumar Yadav",
-        "email": "yadavamitk221@gmail.com",
-        "phone": "08451082380",
-        "street": "Savarkar nagar,",
-        "city": "Thane",
-        "state": "Maharashtra",
-        "pinCode": "400604"
-      },
-      "status": "dispatch",
-      "id": 4
-    },
-    {
-      "items": [
-        {
-          "title": "iPhone X",
-          "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-          "price": 899,
-          "discountPercentage": 17.94,
-          "rating": 4.44,
-          "stock": 34,
-          "brand": "Apple",
-          "category": "smartphones",
-          "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
-          "images": [
-            "https://i.dummyjson.com/data/products/2/1.jpg",
-            "https://i.dummyjson.com/data/products/2/2.jpg",
-            "https://i.dummyjson.com/data/products/2/3.jpg",
-            "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
-          ],
-          "quantity": 1,
-          "user": 1,
-          "id": 1
-        }
-      ],
-      "totalAmount": 899,
-      "totalItems": 1,
-      "user": {
-        "email": "yadavamitk221@gmail.com",
-        "password": "Amit@123",
-        "addresses": [
-          {
-            "name": "Amit Rituraj Yadav",
-            "state": "Maharashtra",
-            "city": "Thane",
-            "pinCode": "400604",
-            "email": "yadavamitk221@gmail.com",
-            "phone": "08451082380",
-            "street": "Savarkar nagar,"
-          },
-          {
-            "name": "Rahul",
-            "email": "yadavamitk221@gmail.com",
-            "phone": "08451082380",
-            "street": "Savarkar nagar,",
-            "city": "Thane",
-            "state": "Maharashtra",
-            "pinCode": "400604"
-          }
-        ],
-        "id": 1
-      },
-      "paymentMethod": "cash",
-      "selectedAddress": {
-        "name": "Rahul",
-        "email": "yadavamitk221@gmail.com",
-        "phone": "08451082380",
-        "street": "Savarkar nagar,",
-        "city": "Thane",
-        "state": "Maharashtra",
-        "pinCode": "400604"
-      },
-      "status": "cancelled",
-      "id": 5
-    },
-    {
-      "items": [
-        {
-          "title": "iPhone 9",
-          "description": "An apple mobile which is nothing like apple",
-          "price": 11,
-          "discountPercentage": 12.96,
-          "rating": 0,
-          "stock": 12,
-          "brand": "Apple",
-          "category": "smartphones",
-          "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
-          "images": [
-            "https://i.dummyjson.com/data/products/1/1.jpg",
-            "https://i.dummyjson.com/data/products/1/2.jpg",
-            "https://i.dummyjson.com/data/products/1/3.jpg",
-            "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
-          ],
-          "deleted": true,
-          "quantity": 1,
-          "user": 1,
-          "id": 1
-        }
-      ],
-      "totalAmount": 11,
-      "totalItems": 1,
-      "user": {
-        "email": "yadavamitk221@gmail.com",
-        "password": "Amit@123",
-        "role": "admin",
-        "addresses": [
-          {
-            "name": "Amit Rituraj Yadav",
-            "state": "Maharashtra",
-            "city": "Thane",
-            "pinCode": "400604",
-            "email": "yadavamitk221@gmail.com",
-            "phone": "08451082380",
-            "street": "Savarkar nagar,"
-          },
-          {
-            "name": "Rahul",
-            "email": "yadavamitk221@gmail.com",
-            "phone": "08451082380",
-            "street": "Savarkar nagar,",
-            "city": "Thane",
-            "state": "Maharashtra",
-            "pinCode": "400604"
-          }
-        ],
-        "id": 1
-      },
-      "paymentMethod": "cash",
-      "selectedAddress": {
-        "name": "Amit Rituraj Yadav",
-        "state": "Maharashtra",
-        "city": "Thane",
-        "pinCode": "400604",
-        "email": "yadavamitk221@gmail.com",
-        "phone": "08451082380",
-        "street": "Savarkar nagar,"
-      },
-      "status": "pending",
-      "id": 6
-    },
-    {
-      "items": [
-        {
-          "title": "Hyaluronic Acid Serum",
-          "description": "L'OrÃ©al Paris introduces Hyaluron Expert Replumping Serum formulated with 1.5% Hyaluronic Acid",
-          "price": 19,
-          "discountPercentage": 13.31,
-          "rating": 4.83,
-          "stock": 110,
-          "brand": "L'Oreal Paris",
-          "category": "skincare",
-          "thumbnail": "https://i.dummyjson.com/data/products/16/thumbnail.jpg",
-          "images": [
-            "https://i.dummyjson.com/data/products/16/1.png",
-            "https://i.dummyjson.com/data/products/16/2.webp",
-            "https://i.dummyjson.com/data/products/16/3.jpg",
-            "https://i.dummyjson.com/data/products/16/4.jpg",
-            "https://i.dummyjson.com/data/products/16/thumbnail.jpg"
-          ],
-          "quantity": 1,
-          "user": 1,
-          "id": 1
-        }
-      ],
-      "totalAmount": null,
-      "totalItems": 1,
-      "user": {
-        "email": "yadavamitk221@gmail.com",
-        "password": "Amit@123",
-        "role": "admin",
-        "addresses": [
-          {
-            "name": "Amit Rituraj Yadav",
-            "state": "Maharashtra",
-            "city": "Thane",
-            "pinCode": "400604",
-            "email": "yadavamitk221@gmail.com",
-            "phone": "08451082380",
-            "street": "Savarkar nagar,"
-          },
-          {
-            "name": "Rahul",
-            "email": "yadavamitk221@gmail.com",
-            "phone": "08451082380",
-            "street": "Savarkar nagar,",
-            "city": "Thane",
-            "state": "Maharashtra",
-            "pinCode": "400604"
-          }
-        ],
-        "id": 1
-      },
-      "paymentMethod": "cash",
-      "selectedAddress": {
-        "name": "Amit Rituraj Yadav",
-        "state": "Maharashtra",
-        "city": "Thane",
-        "pinCode": "400604",
-        "email": "yadavamitk221@gmail.com",
-        "phone": "08451082380",
-        "street": "Savarkar nagar,"
-      },
-      "status": "pending",
-      "id": 7
-    },
     {
       "items": [
         {
@@ -2868,284 +2407,50 @@
             "https://i.dummyjson.com/data/products/5/2.jpg",
             "https://i.dummyjson.com/data/products/5/3.jpg"
           ],
+          "productId": 5,
           "quantity": 1,
-          "user": 1,
-          "id": 1
-        }
-      ],
-      "totalAmount": 446,
-      "totalItems": 1,
-      "user": {
-        "email": "yadavamitk221@gmail.com",
-        "password": "Amit@123",
-        "role": "admin",
-        "addresses": [
-          {
-            "name": "Amit Rituraj Yadav",
-            "state": "Maharashtra",
-            "city": "Thane",
-            "pinCode": "400604",
-            "email": "yadavamitk221@gmail.com",
-            "phone": "08451082380",
-            "street": "Savarkar nagar,"
-          },
-          {
-            "name": "Rahul",
-            "email": "yadavamitk221@gmail.com",
-            "phone": "08451082380",
-            "street": "Savarkar nagar,",
-            "city": "Thane",
-            "state": "Maharashtra",
-            "pinCode": "400604"
-          }
-        ],
-        "id": 1
-      },
-      "paymentMethod": "cash",
-      "selectedAddress": {
-        "name": "Amit Rituraj Yadav",
-        "state": "Maharashtra",
-        "city": "Thane",
-        "pinCode": "400604",
-        "email": "yadavamitk221@gmail.com",
-        "phone": "08451082380",
-        "street": "Savarkar nagar,"
-      },
-      "status": "pending",
-      "id": 8
-    },
-    {
-      "items": [
-        {
-          "title": "iPhone 9",
-          "description": "An apple mobile which is nothing like apple",
-          "price": 11,
-          "discountPercentage": 12.96,
-          "rating": 0,
-          "stock": 12,
-          "brand": "Apple",
-          "category": "smartphones",
-          "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
-          "images": [
-            "https://i.dummyjson.com/data/products/1/1.jpg",
-            "https://i.dummyjson.com/data/products/1/2.jpg",
-            "https://i.dummyjson.com/data/products/1/3.jpg",
-            "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
-          ],
-          "deleted": true,
-          "quantity": 1,
-          "user": 1,
+          "user": 2,
           "id": 1
         },
         {
-          "title": "iPhone 9",
-          "description": "An apple mobile which is nothing like apple",
-          "price": 11,
-          "discountPercentage": 12.96,
-          "rating": 0,
-          "stock": 12,
+          "title": "MacBook Pro",
+          "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+          "price": 1749,
+          "discountPercentage": 11.02,
+          "rating": 4.57,
+          "stock": 83,
           "brand": "Apple",
-          "category": "smartphones",
-          "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
-          "images": [
-            "https://i.dummyjson.com/data/products/1/1.jpg",
-            "https://i.dummyjson.com/data/products/1/2.jpg",
-            "https://i.dummyjson.com/data/products/1/3.jpg",
-            "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
-          ],
-          "deleted": true,
-          "quantity": 1,
-          "user": 1,
-          "id": 2
-        },
-        {
-          "title": "iPhone 9",
-          "description": "An apple mobile which is nothing like apple",
-          "price": 11,
-          "discountPercentage": 12.96,
-          "rating": 0,
-          "stock": 12,
-          "brand": "Apple",
-          "category": "smartphones",
-          "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
-          "images": [
-            "https://i.dummyjson.com/data/products/1/1.jpg",
-            "https://i.dummyjson.com/data/products/1/2.jpg",
-            "https://i.dummyjson.com/data/products/1/3.jpg",
-            "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
-          ],
-          "deleted": true,
-          "quantity": 1,
-          "user": 1,
-          "id": 3
-        },
-        {
-          "title": "iPhone 9",
-          "description": "An apple mobile which is nothing like apple",
-          "price": 11,
-          "discountPercentage": 12.96,
-          "rating": 0,
-          "stock": 12,
-          "brand": "Apple",
-          "category": "smartphones",
-          "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
-          "images": [
-            "https://i.dummyjson.com/data/products/1/1.jpg",
-            "https://i.dummyjson.com/data/products/1/2.jpg",
-            "https://i.dummyjson.com/data/products/1/3.jpg",
-            "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
-          ],
-          "deleted": true,
-          "quantity": 1,
-          "user": 1,
-          "id": 4
-        },
-        {
-          "title": "iPhone 9",
-          "description": "An apple mobile which is nothing like apple",
-          "price": 11,
-          "discountPercentage": 12.96,
-          "rating": 0,
-          "stock": 12,
-          "brand": "Apple",
-          "category": "smartphones",
-          "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
-          "images": [
-            "https://i.dummyjson.com/data/products/1/1.jpg",
-            "https://i.dummyjson.com/data/products/1/2.jpg",
-            "https://i.dummyjson.com/data/products/1/3.jpg",
-            "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
-          ],
-          "deleted": true,
-          "quantity": 1,
-          "user": 1,
-          "id": 5
-        },
-        {
-          "title": "iPhone 9",
-          "description": "An apple mobile which is nothing like apple",
-          "price": 11,
-          "discountPercentage": 12.96,
-          "rating": 0,
-          "stock": 12,
-          "brand": "Apple",
-          "category": "smartphones",
-          "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
-          "images": [
-            "https://i.dummyjson.com/data/products/1/1.jpg",
-            "https://i.dummyjson.com/data/products/1/2.jpg",
-            "https://i.dummyjson.com/data/products/1/3.jpg",
-            "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
-          ],
-          "deleted": true,
-          "quantity": 1,
-          "user": 1,
-          "id": 6
-        }
-      ],
-      "totalAmount": 60,
-      "totalItems": 6,
-      "user": {
-        "email": "yadavamitk221@gmail.com",
-        "password": "Amit@123",
-        "role": "admin",
-        "addresses": [
-          {
-            "name": "Amit Rituraj Yadav",
-            "state": "Maharashtra",
-            "city": "Thane",
-            "pinCode": "400604",
-            "email": "yadavamitk221@gmail.com",
-            "phone": "08451082380",
-            "street": "Savarkar nagar,"
-          },
-          {
-            "name": "Rahul",
-            "email": "yadavamitk221@gmail.com",
-            "phone": "08451082380",
-            "street": "Savarkar nagar,",
-            "city": "Thane",
-            "state": "Maharashtra",
-            "pinCode": "400604"
-          }
-        ],
-        "id": 1
-      },
-      "paymentMethod": "cash",
-      "selectedAddress": {
-        "name": "Amit Rituraj Yadav",
-        "state": "Maharashtra",
-        "city": "Thane",
-        "pinCode": "400604",
-        "email": "yadavamitk221@gmail.com",
-        "phone": "08451082380",
-        "street": "Savarkar nagar,"
-      },
-      "status": "pending",
-      "id": 9
-    },
-    {
-      "items": [
-        {
-          "title": "Infinix INBOOK",
-          "description": "Infinix Inbook X1 Ci3 10th 8GB 256GB 14 Win10 Grey – 1 Year Warranty",
-          "price": 1099,
-          "discountPercentage": 11.83,
-          "rating": 4.54,
-          "stock": 96,
-          "brand": "Infinix",
           "category": "laptops",
-          "thumbnail": "https://i.dummyjson.com/data/products/9/thumbnail.jpg",
+          "thumbnail": "https://i.dummyjson.com/data/products/6/thumbnail.png",
           "images": [
-            "https://i.dummyjson.com/data/products/9/1.jpg",
-            "https://i.dummyjson.com/data/products/9/2.png",
-            "https://i.dummyjson.com/data/products/9/3.png",
-            "https://i.dummyjson.com/data/products/9/4.jpg",
-            "https://i.dummyjson.com/data/products/9/thumbnail.jpg"
+            "https://i.dummyjson.com/data/products/6/1.png",
+            "https://i.dummyjson.com/data/products/6/2.jpg",
+            "https://i.dummyjson.com/data/products/6/3.png",
+            "https://i.dummyjson.com/data/products/6/4.jpg"
           ],
+          "productId": 6,
           "quantity": 1,
-          "user": 1,
-          "id": 7
-        },
-        {
-          "title": "iPhone X",
-          "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-          "price": 899,
-          "discountPercentage": 17.94,
-          "rating": 4.44,
-          "stock": 34,
-          "brand": "Apple",
-          "category": "smartphones",
-          "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
-          "images": [
-            "https://i.dummyjson.com/data/products/2/1.jpg",
-            "https://i.dummyjson.com/data/products/2/2.jpg",
-            "https://i.dummyjson.com/data/products/2/3.jpg",
-            "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
-          ],
-          "quantity": 1,
-          "user": 1,
-          "id": 8
+          "user": 2,
+          "id": 2
         }
       ],
-      "totalAmount": 1707,
+      "totalAmount": 2002,
       "totalItems": 2,
       "user": {
-        "email": "yadavamitk221@gmail.com",
-        "password": "Amit@123",
-        "role": "admin",
+        "email": "prashant@gmail.com",
+        "password": "Prashant@123",
         "addresses": [
           {
-            "name": "Amit Rituraj Yadav",
-            "state": "Maharashtra",
+            "name": "Prashant Singh",
+            "email": "prashant@gmail.com",
+            "phone": "7977007426",
+            "street": "Indra Nagar",
             "city": "Thane",
-            "pinCode": "400604",
-            "email": "yadavamitk221@gmail.com",
-            "phone": "08451082380",
-            "street": "Savarkar nagar,"
+            "state": "Maharashtra",
+            "pinCode": "400606"
           },
           {
-            "name": "Rahul",
+            "name": "Amitkumar Yadav",
             "email": "yadavamitk221@gmail.com",
             "phone": "08451082380",
             "street": "Savarkar nagar,",
@@ -3154,85 +2459,21 @@
             "pinCode": "400604"
           }
         ],
-        "id": 1
+        "role": "user",
+        "id": 2
       },
       "paymentMethod": "cash",
       "selectedAddress": {
-        "name": "Amit Rituraj Yadav",
-        "state": "Maharashtra",
+        "name": "Prashant Singh",
+        "email": "prashant@gmail.com",
+        "phone": "7977007426",
+        "street": "Indra Nagar",
         "city": "Thane",
-        "pinCode": "400604",
-        "email": "yadavamitk221@gmail.com",
-        "phone": "08451082380",
-        "street": "Savarkar nagar,"
+        "state": "Maharashtra",
+        "pinCode": "400606"
       },
       "status": "pending",
-      "id": 10
-    },
-    {
-      "items": [
-        {
-          "title": "iPhone 9",
-          "description": "An apple mobile which is nothing like apple",
-          "price": 11,
-          "discountPercentage": 12.96,
-          "rating": 0,
-          "stock": 12,
-          "brand": "Apple",
-          "category": "smartphones",
-          "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
-          "images": [
-            "https://i.dummyjson.com/data/products/1/1.jpg",
-            "https://i.dummyjson.com/data/products/1/2.jpg",
-            "https://i.dummyjson.com/data/products/1/3.jpg",
-            "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
-          ],
-          "deleted": true,
-          "quantity": 1,
-          "user": 1,
-          "id": 1
-        }
-      ],
-      "totalAmount": 10,
-      "totalItems": 1,
-      "user": {
-        "email": "yadavamitk221@gmail.com",
-        "password": "Amit@123",
-        "role": "admin",
-        "addresses": [
-          {
-            "name": "Amit Rituraj Yadav",
-            "state": "Maharashtra",
-            "city": "Thane",
-            "pinCode": "400604",
-            "email": "yadavamitk221@gmail.com",
-            "phone": "08451082380",
-            "street": "Savarkar nagar,"
-          },
-          {
-            "name": "Rahul",
-            "email": "yadavamitk221@gmail.com",
-            "phone": "08451082380",
-            "street": "Savarkar nagar,",
-            "city": "Thane",
-            "state": "Maharashtra",
-            "pinCode": "400604"
-          }
-        ],
-        "id": 1
-      },
-      "paymentMethod": "cash",
-      "selectedAddress": {
-        "name": "Amit Rituraj Yadav",
-        "state": "Maharashtra",
-        "city": "Thane",
-        "pinCode": "400604",
-        "email": "yadavamitk221@gmail.com",
-        "phone": "08451082380",
-        "street": "Savarkar nagar,"
-      },
-      "status": "pending",
-      "id": 11
+      "id": 1
     }
   ]
 }

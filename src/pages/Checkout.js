@@ -54,13 +54,13 @@ function Checkout() {
     reset
   } = useForm();
 
-  const userArray = useSelector(selectUserInfo);
-  const user = userArray[0];
+  const user = useSelector(selectLoggedInUser);
+  console.log("user", user);
   const currentOrder = useSelector(selectCurrentOrder);
   const items = useSelector(selectItems);
   const [open, setOpen] = useState(true);
   const totalAmount = items.reduce(
-    (amount, item) => discountedPrice(item) * item.quantity + amount,
+    (amount, item) => discountedPrice(item.product) * item.quantity + amount,
     0
   );
 
@@ -71,13 +71,12 @@ function Checkout() {
 
   const totalItems = items.reduce((total, item) => item.quantity + total, 0);
 
-  const handleQuantity = (e, item) => {
+    const handleQuantity = (e, item) => {
     console.log("item", item);
-    dispatch(updateCartAsync({ ...item, quantity: +e.target.value }));
+    dispatch(updateCartAsync({ id: item.id, quantity: +e.target.value }));
   };
 
   const handleRemove = (itemId) => {
-    console.log(itemId);
     dispatch(deleteItemFromCartAsync(itemId));
   };
 
@@ -96,7 +95,7 @@ function Checkout() {
         items,
         totalAmount,
         totalItems,
-        user,
+        user: user.id,
         paymentMethod,
         selectedAddress,
         status: "pending", //other status can be delivered, received.
@@ -295,7 +294,7 @@ function Checkout() {
                   </p>
 
                   <ul role="list" className="divide-y divide-gray-100">
-                    {user.addresses.map((address, index) => (
+                    {user.addresses?.map((address, index) => (
                       <li
                         key={index}
                         className="flex justify-between px-5 gap-x-6 py-5 border-solid border-2 border-gray-200"
@@ -399,8 +398,8 @@ function Checkout() {
                       <li key={item.id} className="flex py-6">
                         <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                           <img
-                            src={item.thumbnail}
-                            alt={item.title}
+                            src={item.product.thumbnail}
+                            alt={item.product.title}
                             className="h-full w-full object-cover object-center"
                           />
                         </div>
@@ -408,12 +407,12 @@ function Checkout() {
                           <div>
                             <div className="flex justify-between text-base font-medium text-gray-900">
                               <h3>
-                                <a href={item.href}>{item.title}</a>
+                                <a href={item.product.href}>{item.product.title}</a>
                               </h3>
-                              <p className="ml-4">{discountedPrice(item)}</p>
+                              <p className="ml-4">{discountedPrice(item.product)}</p>
                             </div>
                             <p className="mt-1 text-sm text-gray-500">
-                              {item.brand}
+                              {item.product.brand}
                             </p>
                           </div>
                           <div className="flex flex-1 items-end justify-between text-sm">

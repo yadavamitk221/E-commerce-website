@@ -69,10 +69,9 @@ export function fetchProductsByFilters(filter, sort, pagination) {
   // filter = {"category":"smartphone"}
   // sort = {_sort: "price"_order="desc"}
   // pagination = {_page:1,_limit=10}
-  // TODO : on server we will support multi values
-  // TODO: SERVER WILL FILTER DELETED PRODUCTS IN CASE OF NON=ADMIN
+  // TODO: we have to try with multiple category and brands 
   let queryString = '';
-  for(let key in filter){
+  for(let key in filter){ 
     const categoryValue = filter[key];
     if(categoryValue.length){
       const lastCategoryValue = categoryValue[categoryValue.length-1];

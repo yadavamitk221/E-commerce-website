@@ -8,9 +8,8 @@ import { selectLoggedInUser } from '../auth/authSlice'
 
 
 const navigation = [
-  { name: 'Dashboard', link: '#', user: false },
-  { name: 'Team', link: '#', user: false },
-  { name: 'Admin', link: '/admin', admin: true},
+  { name: 'Products', link: '/', user: true },
+  { name: 'Products', link: '/admin', admin: true},
   { name: 'orders', link: '/admin/orders', admin: true},
 
   
