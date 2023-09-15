@@ -10,11 +10,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectItems } from "../features/cart/cartSlice";
 import { Navigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { checkUserAsync, updateUserAsync } from "../features/auth/authSlice";
 import { selectLoggedInUser } from "../features/auth/authSlice";
 import { createOrderAsync, selectCurrentOrder } from "../features/order/orderSlice";
-import { selectUserInfo } from "../features/user/userSlice";
 import { discountedPrice } from "../app/constant";
+import { updateUserAsync } from "../features/user/userSlice";
 
 const products = [
   {

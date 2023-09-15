@@ -7,8 +7,8 @@ import { Form } from "react-router-dom";
 
 export default function UserProfile() {
   const dispatch = useDispatch();
-  const user = useSelector(selectUserInfo);
-console.log(user);
+  const userInfo = useSelector(selectUserInfo);
+console.log(userInfo);
 // we will add payment section when wework on backend
 
   const {
@@ -25,21 +25,21 @@ console.log(user);
 
   const handleEdit = (addressUpdate, index) => {
     // updateUserAsync({...user, addresses: [...user.addresses, data]})
-    const newUser = { ...user, addresses: [...user.addresses] }; //for shallow coppy issue
+    const newUser = { ...userInfo, addresses: [...userInfo.addresses] }; //for shallow coppy issue
     newUser.addresses.splice(index, 1, addressUpdate);
     dispatch(updateUserAsync(newUser));
     setSelectedEditIndex(-1);
   };
 
   const handleRemove = (e, index) => {
-    const newUser = { ...user, addresses: [...user.addresses] }; //for shallow coppy issue
+    const newUser = { ...userInfo, addresses: [...userInfo.addresses] }; //for shallow coppy issue
     newUser.addresses.splice(index, 1);
     dispatch(updateUserAsync(newUser));
   };
 
   const handleEditForm = (index) => {
     setSelectedEditIndex(index);
-    const address = user.addresses[index];
+    const address = userInfo.addresses[index];
     setValue("name", address.name);
     setValue("state", address.state);
     setValue("city", address.city);
@@ -50,8 +50,8 @@ console.log(user);
   };
 
   const handleAdd = (address) => { 
-    console.log(...user.addresses);
-    const newUser = { ...user, addresses: [...user.addresses, address] }; //for shallow coppy issue
+    console.log(...userInfo.addresses);
+    const newUser = { ...userInfo, addresses: [...userInfo.addresses, address] }; //for shallow coppy issue
     dispatch(updateUserAsync(newUser));
     setSelectedEditIndex(-1);
     setShowAddAddressForm(false);
@@ -62,14 +62,14 @@ console.log(user);
       <div className="mx-auto mt-12 bg-white max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
           <h1 className="text-4xl my-2 font-bold tracking-tight text-gray-900">
-          {console.log(user)}
-            Name: {user.name ? user.name : "New User"}
+          {console.log(userInfo)}
+            Name: {userInfo.name ? userInfo.name : "New User"}
           </h1>
           <h3 className="text-xl my-2  tracking-tight text-red-900">
-            Email address: {user.email}
+            Email address: {userInfo.email}
           </h3>
-          {user.role === 'admin' && <h3 className="text-xl my-2  tracking-tight text-red-900">
-           role: {user.role}
+          {userInfo.role === 'admin' && <h3 className="text-xl my-2  tracking-tight text-red-900">
+           role: {userInfo.role}
         </h3>}
         </div>
 
@@ -254,7 +254,7 @@ console.log(user);
               </p>
 
               <ul role="list" className="divide-y divide-gray-100">
-                {user.addresses?.map((address, index) => (
+                {userInfo.addresses?.map((address, index) => (
                   <li
                     key={index}
                     className="flex justify-between px-5 gap-x-6 py-5 border-solid border-2 border-gray-200"
@@ -296,7 +296,7 @@ console.log(user);
         </Form>
       ) : null}
           <p className="mt-0.5 my-5 text-sm text-gray-500">Your Address:</p>
-          {user.addresses?.map((address, index) => (
+          {userInfo.addresses?.map((address, index) => (
             <div key={index}>
               {selectedEditIndex === index ? (
                 <Form
@@ -479,7 +479,7 @@ console.log(user);
                       </p>
 
                       <ul role="list" className="divide-y divide-gray-100">
-                        {user.addresses.map((address, index) => (
+                        {userInfo.addresses.map((address, index) => (
                           <li
                             key={index}
                             className="flex justify-between px-5 gap-x-6 py-5 border-solid border-2 border-gray-200"
