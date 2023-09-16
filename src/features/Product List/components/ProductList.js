@@ -1,7 +1,6 @@
 import React, { useState, Fragment, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
-  fetchAllProductsAsync,
   fetchProductsByFiltersAsync,
   selectAllProducts,
   selectTotalItems,
@@ -13,8 +12,6 @@ import {
 import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
   StarIcon,
 } from "@heroicons/react/20/solid";
 import { Link } from "react-router-dom";

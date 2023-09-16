@@ -20,6 +20,7 @@ export const updateOrderAsync = createAsyncThunk(
   'order/updateOrder',
   async (order) => {
     const response = await updateOrder(order);
+    console.log("res.data",response.data);
     return response.data;
   }
 );

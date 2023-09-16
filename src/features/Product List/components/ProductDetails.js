@@ -51,6 +51,7 @@ function ProductDetails() {
     if(items.findIndex((item) => item.product.id === product.id) < 0) {
       const newItem = { product: product.id, quantity: 1, user: user.id };
       dispatch(addToCartAsync(newItem));
+      alert.success('Item added to cart');
     } else {
       alert.error("Item Already added");
     }

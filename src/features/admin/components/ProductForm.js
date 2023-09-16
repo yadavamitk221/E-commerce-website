@@ -19,7 +19,6 @@ function ProductForm() {
     handleSubmit,
     setValue,
     reset,
-    watch,
     formState: { errors },
   } = useForm();
   const dispatch = useDispatch();
@@ -54,7 +53,6 @@ function ProductForm() {
     const product = {...selectedProduct};
     product.deleted = true;
     dispatch(updateProductAsync(product));
-
   }
 
   return (
@@ -82,9 +80,11 @@ function ProductForm() {
             product.id = params.id;
             product.rating = selectedProduct.rating || 0;
             dispatch(updateProductAsync(product));
+            alert.success('Product Updated Successfully');
             reset();
           } else {
             dispatch(createProductAsync(product));
+            alert.success('Product Created');
             // TODO: on product successfully added clear fields and show a message
             reset();
           }
@@ -95,17 +95,8 @@ function ProductForm() {
             <h2 className="text-base font-semibold leading-7 text-gray-900">
               Add Product
             </h2>
-            // "id": 1, // "title": "iPhone 9", // "description": "An apple
-            mobile which is nothing like apple", // "price": 549, //
-            "discountPercentage": 12.96, // "rating": 4.69, // "stock": 94, //
-            "brand": "Apple", // "category": "smartphones", // "thumbnail":
-            "https://i.dummyjson.com/data/products/1/thumbnail.jpg", //
-            "images": [ // "https://i.dummyjson.com/data/products/1/1.jpg", //
-            "https://i.dummyjson.com/data/products/1/2.jpg", //
-            "https://i.dummyjson.com/data/products/1/3.jpg", //
-            "https://i.dummyjson.com/data/products/1/4.jpg", //
-            "https://i.dummyjson.com/data/products/1/thumbnail.jpg" // ]
             <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 ">
+            {selectedProduct && selectedProduct.deleted && <h2 className="text-red-500 sm:col-span-6">This Product is deleted</h2>}
               <div className="sm:col-span-6">
                 <label
                   htmlFor="title"
