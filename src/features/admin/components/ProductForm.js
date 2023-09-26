@@ -62,7 +62,7 @@ function ProductForm() {
         onSubmit={handleSubmit((data) => {
           console.log(data);
           const product = { ...data };
-          product.images = [
+            product.images = [
             product.image1,
             product.image2,
             product.image3,
@@ -80,11 +80,11 @@ function ProductForm() {
             product.id = params.id;
             product.rating = selectedProduct.rating || 0;
             dispatch(updateProductAsync(product));
-            alert.success('Product Updated Successfully');
+            alert('Product Updated Successfully');
             reset();
           } else {
             dispatch(createProductAsync(product));
-            alert.success('Product Created');
+            alert('Product Created');
             // TODO: on product successfully added clear fields and show a message
             reset();
           }
