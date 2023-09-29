@@ -18,7 +18,7 @@ import {
 } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import "./index.css";
-import { selectLoggedInUser } from "./features/auth/authSlice";
+import { checkAuthAsync, selectLoggedInUser, selectUserChecked } from "./features/auth/authSlice";
 import { fetchItemsByUserIdAsync } from "./features/cart/cartSlice";
 import { fetchLoggedInUserAsync } from "./features/user/userSlice";
 import Logout from "./features/auth/components/Logout";
@@ -28,6 +28,7 @@ import AdminProductDetailsPage from "./pages/AdminProductDetailsPage";
 import ProtectedAdmin from "./features/auth/components/ProtectedAdmin";
 import AdminProductFormPage from "./pages/AdminProductFormPage";
 import AdminOrderPage from "./pages/AdminOrderPage";
+import StripeCheckout from "./pages/stripeCheckout";
 
 const router = createBrowserRouter([
   {
@@ -152,6 +153,15 @@ const router = createBrowserRouter([
     ),
   },
   {
+    path: "/stripe-checkout/",
+    element: (
+      <Protected>
+        <StripeCheckout></StripeCheckout>
+      </Protected>
+      // we will add pages later right now using components directly.
+    ),
+  },
+  {
     path: "/logout",
     element: (
       <Protected>
@@ -165,19 +175,23 @@ const router = createBrowserRouter([
 function App() {
   const dispatch = useDispatch();
   const user = useSelector(selectLoggedInUser);
+  const userChecked = useSelector(selectUserChecked);
+
+  useEffect(() => {
+    dispatch(checkAuthAsync());
+  }, []);
 
   useEffect(() => {
     if (user) {
       dispatch(fetchItemsByUserIdAsync());
-      console.log("user", user);
       // we can get req.uer by token onbackend so no need to five in front-end
       dispatch(fetchLoggedInUserAsync());
     }
   }, [dispatch, user]);
   return (
     <div className="App">
-      <RouterProvider router={router} />
-      {/*Link must be inside route provider */}
+    {console.log(userChecked)}
+     {userChecked && <RouterProvider router={router} />}
     </div>
   );
 }

@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
-import { selectItems } from "./cartSlice";
+import { selectCartLoaded, selectItems } from "./cartSlice";
 import { updateCartAsync, deleteItemFromCartAsync } from "./cartSlice";
 import { Navigate } from "react-router-dom";
 import { discountedPrice } from "../../app/constant";
@@ -13,6 +13,7 @@ export default function Cart() {
   const items = useSelector(selectItems);
   const [open, setOpen] = useState(true);
   const totalAmount = items.reduce((amount, item) => discountedPrice(item.product)*item.quantity + amount , 0);
+  const cartLoaded = useSelector(selectCartLoaded);
 
   const totalItems = items.reduce((total, item) => item.quantity + total , 0);
   
@@ -29,7 +30,7 @@ export default function Cart() {
 
   return (
     <div>
-    {!items.length && <Navigate to={'/'} replace={true}></Navigate>}
+    {!items.length && cartLoaded && <Navigate to={'/'} replace={true}></Navigate>}
 
     <div className="mx-auto mt-12 bg-white max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
     <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">

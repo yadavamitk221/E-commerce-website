@@ -1,5 +1,7 @@
 // A mock function to mimic making an async request for d
 
+import { json } from "react-router-dom";
+
 export function createUser(userData) {
   return new Promise(async (resolve) => {
     const response = await fetch("http://localhost:8080/auth/signup", {
@@ -13,10 +15,52 @@ export function createUser(userData) {
   });
 }
 
+export function loginUser(loginInfo) {
+  return new Promise(async (resolve, reject) => {
+    try {
+      console.log("loginInfo", loginInfo);
+      const response = await fetch("http://localhost:8080/auth/login", {
+        method: "POST",
+        body: JSON.stringify(loginInfo),
+        headers: { "content-type": "application/json" },
+      });
+      if (response.ok) {
+        const data = await response.json();
+        resolve({ data });
+      } else {
+        const error = await response.json();
+        console.log("error");
+        return reject({ error });
+      }
+      //  TODO: on server it will return only some information of the user (not password);
+    } catch (error) {
+      return reject({ error });
+    }
+  });
+}
+
+export function checkAuth() {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const response = await fetch("http://localhost:8080/auth/check");
+      if (response.ok) {
+        const data = await response.json();
+        resolve({ data });
+      } else {
+        const error = await response.json();
+        return reject({ error });
+      }
+      //  TODO: on server it will return only some information of the user (not password);
+    } catch (error) {
+      return reject({ error });
+    }
+  });
+}
+
 export function checkUser(loginInfo) {
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await fetch("http://localhost:8080/auth/login", {
+        const response = await fetch("http://localhost:8080/auth/login", {
         method: "POST",
         body: JSON.stringify(loginInfo),
         headers: { "content-type": "application/json" },
@@ -34,7 +78,6 @@ export function checkUser(loginInfo) {
     }
   });
 }
-
 
 export function signOut(userId) {
   return new Promise(async (resolve) => {
