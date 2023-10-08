@@ -8,7 +8,6 @@ import { Form } from "react-router-dom";
 export default function UserProfile() {
   const dispatch = useDispatch();
   const userInfo = useSelector(selectUserInfo);
-console.log(userInfo);
 // we will add payment section when wework on backend
 
   const {

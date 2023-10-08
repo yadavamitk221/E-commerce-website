@@ -4,7 +4,7 @@ import { json } from "react-router-dom";
 
 export function createUser(userData) {
   return new Promise(async (resolve) => {
-    const response = await fetch("http://localhost:8080/auth/signup", {
+    const response = await fetch("/auth/signup", {
       method: "POST",
       body: JSON.stringify(userData),
       headers: { "content-type": "application/json" },
@@ -19,7 +19,7 @@ export function loginUser(loginInfo) {
   return new Promise(async (resolve, reject) => {
     try {
       console.log("loginInfo", loginInfo);
-      const response = await fetch("http://localhost:8080/auth/login", {
+      const response = await fetch("/auth/login", {
         method: "POST",
         body: JSON.stringify(loginInfo),
         headers: { "content-type": "application/json" },
@@ -28,13 +28,12 @@ export function loginUser(loginInfo) {
         const data = await response.json();
         resolve({ data });
       } else {
-        const error = await response.json();
-        console.log("error");
-        return reject({ error });
+        const error = await response.text();
+        reject("Invalid Credentials");
       }
       //  TODO: on server it will return only some information of the user (not password);
     } catch (error) {
-      return reject({ error });
+      return reject( error );
     }
   });
 }
@@ -42,7 +41,7 @@ export function loginUser(loginInfo) {
 export function checkAuth() {
   return new Promise(async (resolve, reject) => {
     try {
-      const response = await fetch("http://localhost:8080/auth/check");
+      const response = await fetch("/auth/check");
       if (response.ok) {
         const data = await response.json();
         resolve({ data });
@@ -60,7 +59,7 @@ export function checkAuth() {
 export function checkUser(loginInfo) {
   return new Promise(async (resolve, reject) => {
     try {
-        const response = await fetch("http://localhost:8080/auth/login", {
+      const response = await fetch("/auth/login", {
         method: "POST",
         body: JSON.stringify(loginInfo),
         headers: { "content-type": "application/json" },

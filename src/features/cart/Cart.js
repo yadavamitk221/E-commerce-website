@@ -1,7 +1,5 @@
 import React, { useState, Fragment } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Dialog, Transition } from "@headlessui/react";
-import { XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import { selectCartLoaded, selectItems } from "./cartSlice";
 import { updateCartAsync, deleteItemFromCartAsync } from "./cartSlice";

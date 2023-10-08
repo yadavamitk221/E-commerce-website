@@ -190,7 +190,6 @@ function App() {
   }, [dispatch, user]);
   return (
     <div className="App">
-    {console.log(userChecked)}
      {userChecked && <RouterProvider router={router} />}
     </div>
   );

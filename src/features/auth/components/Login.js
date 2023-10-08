@@ -16,7 +16,7 @@ export default function Login() {
 
   return (
     <div>
-    {user && <Navigate to={'/'} replace={true}></Navigate>}
+      {user && <Navigate to={"/"} replace={true}></Navigate>}
       {/*
       This example requires updating your template:
 
@@ -57,18 +57,21 @@ export default function Login() {
               <div className="mt-2">
                 <input
                   id="email"
-                  {...register('email', {
+                  {...register("email", {
                     required: "Email is required",
-                    pattern: {value: /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/gi,
-                    message: "email not valid"
-                  }
+                    pattern: {
+                      value: /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/gi,
+                      message: "email not valid",
+                    },
                   })}
-                  type='email'
+                  type="email"
                   autoComplete="email"
                   required
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
-                {errors.password && <p className="text-red-500">{errors.password.message}</p>}
+                {errors.email && (
+                  <p className="text-red-500">{errors.email.message}</p>
+                )}
               </div>
             </div>
 
@@ -93,11 +96,22 @@ export default function Login() {
                 <input
                   id="password"
                   {...register("password", {
-                    required: "password is required"
+                    required: "password is required",
                   })}
+                  type="password"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
-                {error && <p className="text-red-500">{error || error.message}</p>}
+                <div>
+                  {errors.password && (
+                    <p className="text-red-500">{errors.password.message}</p>
+                  )}
+                </div>
+              </div>
+
+              <div>
+                {error && 
+                  <p className="text-red-500">{error || error.message}</p>
+                }
               </div>
             </div>
 
